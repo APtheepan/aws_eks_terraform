@@ -7,7 +7,7 @@ locals {
 }
 
 module "eks" {
-  source = "/home/theepan/aws_eks_cluster_setup/modules"
+  source = "../module"
 
   env                   = var.env
   cluster-name          = "${local.env}-${local.org}-${var.cluster-name}"
