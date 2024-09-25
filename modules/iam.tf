@@ -69,6 +69,7 @@ resource "aws_iam_role_policy_attachment" "eks-AmazonEBSCSIDriverPolicy" {
 }
 
 # OIDC
+#Here we are creating OIDC to attcah to the EKS cluster
 resource "aws_iam_role" "eks_oidc" {
   assume_role_policy = data.aws_iam_policy_document.eks_oidc_assume_role_policy.json
   name               = "eks-oidc"
